@@ -1,0 +1,198 @@
+.complaints-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.complaints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+}
+
+.complaint-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.complaint-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.complaint-card-header h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.complaint-desc-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.meta-info-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  background: var(--bg-tertiary);
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.meta-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.meta-icon {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Horizontal Timeline Tracker */
+.timeline-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0 6px;
+}
+
+.timeline-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-labels span {
+  width: 60px;
+  text-align: center;
+}
+.timeline-labels span:first-child { text-align: left; width: auto; }
+.timeline-labels span:last-child { text-align: right; width: auto; }
+
+.timeline-labels .label-active {
+  color: var(--primary);
+}
+
+.timeline-bar {
+  position: relative;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.timeline-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 10px;
+  transition: width var(--transition-normal);
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  position: relative;
+  z-index: 2;
+  transition: all var(--transition-fast);
+}
+
+.timeline-dot.dot-active {
+  border-color: var(--primary);
+  background: var(--primary);
+  box-shadow: 0 0 6px var(--primary);
+}
+
+/* Card footer resolver selectors */
+.complaint-card-footer {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-read-only-status {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* AI Classification Preview inside Form */
+.ai-classification-box {
+  background: linear-gradient(135deg, #1b1625 0%, #110e1a 100%);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: var(--border-radius-md);
+  padding: 14px 18px;
+  margin-top: 16px;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.1);
+}
+
+.ai-box-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-purple);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.ai-box-header .ai-icon {
+  font-size: 15px;
+}
+
+.ai-box-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #c4b5fd;
+}
+
+.ai-detail-item strong {
+  color: #ffffff;
+}
+
+.ai-detail-item .text-glow {
+  color: var(--accent-purple);
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+}
